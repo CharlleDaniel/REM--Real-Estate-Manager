@@ -1,0 +1,12 @@
+*.form-control.ng-invalid.ng-touched{
+  color: red
+}
+
+#message{
+  color: red;
+}
+*:focus {
+	border: 2px solid;
+
+	
+}
