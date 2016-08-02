@@ -5,7 +5,7 @@ myApp.controller('PostImmobileController', function($scope, $http){
 
   $scope.postImmobile = function () {
 
-    var request =$http.post("/controller/ImmobileController.php", $scope.immobile);
+    var request =$http.post("rem/controller/ImmobileController.php", $scope.immobile);
 
     request.then(function(response) {
       if(response.data.tag=='erro'){
@@ -36,7 +36,7 @@ myApp.controller('UpdateImmobileController', function($scope, $http){
       valuedValue: $scope.valuedValue,
       description: $scope.description,
     };
-    var request =$http.put("/controller/ImmobileController.php", data);
+    var request =$http.put("rem/controller/ImmobileController.php", data);
     request.then(function(response) {
 
       if(response.data.tag=='erro')
@@ -56,7 +56,7 @@ myApp.controller('DeleteImmobileController', function($scope, $http){
       id: id
     };
 
-    var request =$http.delete("/controller/ImmobileController.php", {data: input});
+    var request =$http.delete("rem/controller/ImmobileController.php", {data: input});
 
     request.then(function(response) {
       if(response.data.tag=='erro')
@@ -101,7 +101,7 @@ myApp.controller('GetImmobilesController', function($scope, $http){
        params: data,
      };
 
-     $http.get("/controller/ImmobileController.php",config).then(
+     $http.get("rem/controller/ImmobileController.php",config).then(
       function success(response){
         $scope.immobiles = angular.fromJson(response.data.result);
         $scope.qtdPages = response.data.qtdPages;
@@ -128,7 +128,7 @@ myApp.controller('GetImmobileController', function($scope, $http){
 
  $scope.getImmobilesNoPage = function () {
 
-   $http.get("/controller/ImmobileController.php").then(
+   $http.get("rem/controller/ImmobileController.php").then(
     function success(response){
       $scope.immobiles = angular.fromJson(response.data.result);
 
@@ -155,7 +155,7 @@ myApp.controller('GetImmobileIdController', function($scope, $http){
    params: data,
  };
 
- $http.get("/controller/ImmobileController.php", config).then(
+ $http.get("rem/controller/ImmobileController.php", config).then(
   function success(response){
     result=response.data.result;
     getValues();
@@ -196,7 +196,7 @@ myApp.controller('GetImmobileValuesController', function($scope, $http){
 myApp.directive('immobile', function immobileDirective(){
   return{
     restrict: 'E',
-    templateUrl: '/view/pages/immobile.html',
+    templateUrl: 'rem/view/pages/immobile.html',
     scope: {
       address: '=immobileAddress',
       description: '=immobileDescription',

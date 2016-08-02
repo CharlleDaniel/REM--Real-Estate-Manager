@@ -7,19 +7,19 @@ app.config(function($routeProvider, $locationProvider)
    //'/home', carregaremos o template home.html e o controller 'HomeCtrl'
       
 
-   .when('/home', {
-      templateUrl : '/view/pages/home.php',
+   .when('/rem/home', {
+      templateUrl : 'rem/view/pages/home.php',
       controller     : 'HomeCtrl',
    })
     
-   .when('/imoveis', {
-      templateUrl : '/view/pages/gerenciar_imoveis.php',
+   .when('/rem/imoveis', {
+      templateUrl : 'rem/view/pages/gerenciar_imoveis.php',
       controller     : 'GerImoCtrl',
    })
 
  
    // caso não seja nenhum desses, redirecione para a rota '/home'
-   .otherwise ({ redirectTo: '/home' });
+   .otherwise ({ redirectTo: '/rem/home' });
 
    
 });

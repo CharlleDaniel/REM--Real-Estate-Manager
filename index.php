@@ -6,46 +6,46 @@
 <div class="content-wrapper" ng-view></div>
 
 <?php 
-  include 'view/modals/modal_client.php';
-  include 'view/modals/modal_employee.php';
-  include 'view/modals/modal_immobile.php';
-  include 'view/modals/modal_immobile_update.php';
-  include 'view/modals/modal_contract.php';
+  include './view/modals/modal_client.php';
+  include './view/modals/modal_employee.php';
+  include './view/modals/modal_immobile.php';
+  include './view/modals/modal_immobile_update.php';
+  include './view/modals/modal_contract.php';
 ?>
 
 <!-- angular-->
   <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
 
-<script src="bower_components/angular/angular.js" charset="utf-8"></script>
+<script src="rem/bower_components/angular/angular.js" charset="utf-8"></script>
  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 
 <script>
  angular.module("CombineModule", ["app","clientApp","employeeApp","immobileApp","logoutApp"]);
 </script>
-<script src="view/angular/app.js" charset="utf-8"></script>
-<script src="view/angular/controllers.js" charset="utf-8"></script>
-<script src="view/angular/logout.js" charset="utf-8"></script>
-<script src="view/angular/client.js" charset="utf-8"></script>
-<script src="view/angular/contract.js" charset="utf-8"></script>
-<script src="view/angular/client.js" charset="utf-8"></script>
-<script src="view/angular/immobile.js" charset="utf-8"></script>
-<script src="view/angular/employee.js" charset="utf-8"></script>
+<script src="rem/view/angular/app.js" charset="utf-8"></script>
+<script src="rem/view/angular/controllers.js" charset="utf-8"></script>
+<script src="rem/view/angular/logout.js" charset="utf-8"></script>
+<script src="rem/view/angular/client.js" charset="utf-8"></script>
+<script src="rem/view/angular/contract.js" charset="utf-8"></script>
+<script src="rem/view/angular/client.js" charset="utf-8"></script>
+<script src="rem/view/angular/immobile.js" charset="utf-8"></script>
+<script src="rem/view/angular/employee.js" charset="utf-8"></script>
 
-<script src="view/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script src="rem/view/plugins/jQuery/jQuery-2.1.4.min.js"></script>
 
 <!-- Bootstrap 3.3.5 -->
-<script src="view/bootstrap/js/bootstrap.min.js"></script>
+<script src="rem/view/bootstrap/js/bootstrap.min.js"></script>
 
-<script src="view/dist/js/app.min.js"></script>
+<script src="rem/view/dist/js/app.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="view/dist/js/demo.js"></script>
+<script src="rem/view/dist/js/demo.js"></script>
 <!-- JSPDF (Generate pdf to contract´s) -->
-<script type="text/javascript" src="view/plugins/jsPDF-master/jspdf.js"></script>
-<script type="text/javascript" src="view/plugins/jsPDF-master/dist/jspdf.debug.js"></script>
-<script type="text/javascript" src="view/plugins/jsPDF-master/plugins/standard_fonts_metrics.js"></script>
-<script type="text/javascript" src="view/plugins/jsPDF-master/plugins/split_text_to_size.js"></script>
-<script type="text/javascript" src="view/plugins/jsPDF-master/plugins/from_html.js"></script>
+<script type="text/javascript" src="rem/view/plugins/jsPDF-master/jspdf.js"></script>
+<script type="text/javascript" src="rem/view/plugins/jsPDF-master/dist/jspdf.debug.js"></script>
+<script type="text/javascript" src="rem/view/plugins/jsPDF-master/plugins/standard_fonts_metrics.js"></script>
+<script type="text/javascript" src="rem/view/plugins/jsPDF-master/plugins/split_text_to_size.js"></script>
+<script type="text/javascript" src="rem/view/plugins/jsPDF-master/plugins/from_html.js"></script>
 <script type="text/javascript">
     function gerar() {
         var pdf = new jsPDF('p','pt','letter');

@@ -5,7 +5,7 @@ myApp.controller('PostEmployeeController', function($scope, $http){
   
   $scope.postEmployee = function () {
 
-   var request =$http.post("/controller/EmployeeController.php", $scope.employee);
+   var request =$http.post("rem/controller/EmployeeController.php", $scope.employee);
 
     request.then(function(response) {
       if(response.data.tag == 'erro'){
@@ -25,7 +25,7 @@ myApp.controller('UpdateEmployeeController', function($scope, $http){
 
   $scope.updateEmployee = function () {
 
-    var request =$http.put("../controller/EmployeeController.php", $scope.employee);
+    var request =$http.put("rem/controller/EmployeeController.php", $scope.employee);
 
     request.then(function(response) {
        if(response.data.tag=='erro')
@@ -44,7 +44,7 @@ myApp.controller('DeleteEmployeeController', function($scope, $http){
 
   $scope.deleteEmployee = function () {
 
-    var request =$http.delete("../controller/EmployeeController.php", $scope.employee);
+    var request =$http.delete("rem/controller/EmployeeController.php", $scope.employee);
 
     request.then(function(response) {
        if(response.data.tag=='erro')

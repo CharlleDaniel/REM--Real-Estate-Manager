@@ -10,7 +10,7 @@ if ($_SESSION ['type'] != 'administrador' and $_SESSION ['type'] != 'funcionario
     // Destrói a sessão por segurança
   session_destroy ();
     // Redireciona o visitante de volta pro login
-  header ( "Location:/login.php" );
+  header ( "Location:/rem/login.php" );
   exit ();
 }
 
@@ -27,21 +27,21 @@ if ($_SESSION ['type'] != 'administrador' and $_SESSION ['type'] != 'funcionario
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
-  <link rel="stylesheet" href="view/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="rem/view/bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
  
   <!-- Theme style -->
-  <link rel="stylesheet" href="view/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="rem/view/dist/css/AdminLTE.min.css">
   
     <!-- AdminLTE Skins. Choose a skin from the css/skins
     folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="view/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="rem/view/dist/css/skins/_all-skins.min.css">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="view/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="rem/view/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     
-    <link rel="stylesheet" href="view/css/normalize.css"> 
-    <link rel="stylesheet" href="view/css/style.css">
+    <link rel="stylesheet" href="rem/view/css/normalize.css"> 
+    <link rel="stylesheet" href="rem/view/css/style.css">
 
 
  
@@ -55,7 +55,7 @@ if ($_SESSION ['type'] != 'administrador' and $_SESSION ['type'] != 'funcionario
           <!-- mini logo for sidebar mini 50x50 pixels -->
         
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><img src="view/images/indice2.png" width="80%" height="50%"></span>
+          <span class="logo-lg"><img src="rem/view/images/indice2.png" width="80%" height="50%"></span>
         </a>  
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" style="background-color:#222d32 "role="navigation">
@@ -72,13 +72,13 @@ if ($_SESSION ['type'] != 'administrador' and $_SESSION ['type'] != 'funcionario
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="view/images/imob.jpg" class="user-image" alt="User Image">
+                  <img src="rem/view/images/imob.jpg" class="user-image" alt="User Image">
                   <span class="hidden-xs"><?php echo $_SESSION['name'] ?></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="view/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <img src="rem/view/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     </br>
                     <p>
                       Charlle Daniel - Gerente de Projeto
@@ -120,8 +120,8 @@ if ($_SESSION ['type'] != 'administrador' and $_SESSION ['type'] != 'funcionario
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-          <li ng-class="{active: activetab == '/home'}">
-            <a href="/home">
+          <li ng-class="{active: activetab == '/rem/home'}">
+            <a href="/rem/home">
               <i class="fa fa-home"></i>
               <span>Início</span>
             </a>
@@ -149,7 +149,7 @@ if ($_SESSION ['type'] != 'administrador' and $_SESSION ['type'] != 'funcionario
               <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-              <li ng-class="{active: activetab == '/imoveis'}"><a href="/imoveis">
+              <li ng-class="{active: activetab == '/rem/imoveis'}"><a href="/rem/imoveis">
               <i class="fa fa-circle-o"></i> Imovéis</a></li>
               <li><a href="view/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Clientes</a></li>
               <li><a href="view/pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Contratos</a></li>
@@ -327,4 +327,3 @@ if ($_SESSION ['type'] != 'administrador' and $_SESSION ['type'] != 'funcionario
       <!-- Add the sidebar's background. This div must be placed
       immediately after the control sidebar -->
 <div class="control-sidebar-bg"></div>
-

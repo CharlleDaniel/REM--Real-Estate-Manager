@@ -6,7 +6,7 @@ myApp.controller('PostClientController', function($scope, $http){
 
   $scope.postClient = function () {
    
-    var request =$http.post("/controller/ClientController.php", $scope.client);
+    var request =$http.post("rem/controller/ClientController.php", $scope.client);
 
     request.then(function(response) {
       if(response.data.tag =='erro'){
@@ -26,7 +26,7 @@ myApp.controller('UpdateClientController', function($scope, $http){
 
   $scope.updateClient = function () {
     
-    var request =$http.put("/controller/ClientController.php", $scope.client);
+    var request =$http.put("rem/controller/ClientController.php", $scope.client);
 
     request.then(function(response) {
        if(response.data.tag=='erro')
@@ -43,7 +43,7 @@ myApp.controller('DeleteClientController', function($scope, $http){
 
   $scope.deleteClient = function () {
     
-    var request =$http.delete("/controller/ClientController.php", $scope.client);
+    var request =$http.delete("rem/controller/ClientController.php", $scope.client);
 
     request.then(function(response) {
        if(response.data.tag=='erro')
@@ -57,7 +57,7 @@ myApp.controller('DeleteClientController', function($scope, $http){
 myApp.controller('ClientsController', function($scope,$http){
 
   $scope.getClients = function () {
-    $http.get("/controller/ClientController.php").then(
+    $http.get("rem/controller/ClientController.php").then(
 
       function success(response){
         $scope.clients = angular.fromJson(response.data.result);

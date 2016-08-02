@@ -5,4 +5,4 @@ RewriteEngine On
   RewriteRule ^ - [L]
 
   # If the requested resource doesn't exist, use index.php
-  RewriteRule ^ /index.php
+  RewriteRule ^ /rem/index.php
